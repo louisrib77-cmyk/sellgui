@@ -1,0 +1,107 @@
+# SellGUI – Konfiguration (Texte: MiniMessage)
+
+economy:
+  # auto = Vault, falls vorhanden, sonst give-command | vault | command
+  mode: auto
+  # >>> HIER den Befehl deines Wirtschafts-Plugins eintragen (Platzhalter: {player} {amount}) <<<
+  give-command: "eco give {player} {amount}"
+
+# true = nur "normale" Items ohne Namen/Verzauberung/Haltbarkeitsschaden werden gekauft
+only-plain-items: true
+
+gui:
+  title: "<dark_green>Verkaufen"
+  sell-name: "<green><bold>Verkaufen</bold> <gray>({amount}$)"
+  sell-lore:
+    - "<gray>Items in der Verkaufsfläche: <white>{count}"
+    - "<gray>Wert: <green>{amount}$"
+    - ""
+    - "<yellow>Klicken zum Verkaufen"
+  all-name: "<gold><bold>Alles verkaufen"
+  all-lore:
+    - "<gray>Verkauft alles Verkaufbare aus"
+    - "<gray>deinem Inventar und der Fläche."
+  cancel-name: "<red><bold>Abbrechen"
+  cancel-lore:
+    - "<gray>Schließt das Fenster."
+    - "<gray>Du bekommst deine Items zurück."
+
+messages:
+  prefix: "<dark_gray>[<green>Verkauf</green>]</dark_gray> <gray>"
+  sold: "{prefix}<white>{count}</white> Items für <green>{amount}$</green> verkauft."
+  nothing: "{prefix}<red>Es gibt nichts Verkaufbares."
+  failed: "{prefix}<red>Die Gutschrift hat nicht geklappt. Du behältst deine Items."
+  players-only: "<red>Nur für Spieler."
+  no-permission: "<red>Dazu hast du keine Berechtigung."
+  reloaded: "{prefix}Preise neu geladen ({count} Items)."
+
+# Preis pro Stück. Was hier nicht steht, kann nicht verkauft werden.
+# Preis 0 oder Eintrag löschen = nicht verkaufbar.
+prices:
+  # Erze & Edelsteine
+  COAL: 1
+  CHARCOAL: 0.8
+  RAW_COPPER: 0.8
+  COPPER_INGOT: 1
+  RAW_IRON: 1.5
+  IRON_INGOT: 2
+  RAW_GOLD: 3
+  GOLD_INGOT: 4
+  LAPIS_LAZULI: 1
+  REDSTONE: 0.8
+  QUARTZ: 1
+  AMETHYST_SHARD: 1
+  EMERALD: 12
+  DIAMOND: 15
+  NETHERITE_SCRAP: 50
+  # Steine & Erde
+  COBBLESTONE: 0.1
+  STONE: 0.15
+  COBBLED_DEEPSLATE: 0.1
+  DEEPSLATE: 0.15
+  DIRT: 0.05
+  SAND: 0.1
+  GRAVEL: 0.1
+  NETHERRACK: 0.05
+  # Holz
+  OAK_LOG: 0.5
+  SPRUCE_LOG: 0.5
+  BIRCH_LOG: 0.5
+  JUNGLE_LOG: 0.6
+  ACACIA_LOG: 0.5
+  DARK_OAK_LOG: 0.5
+  MANGROVE_LOG: 0.5
+  CHERRY_LOG: 0.6
+  # Farm
+  WHEAT: 0.5
+  CARROT: 0.4
+  POTATO: 0.4
+  BEETROOT: 0.4
+  SUGAR_CANE: 0.3
+  PUMPKIN: 0.6
+  MELON_SLICE: 0.15
+  COCOA_BEANS: 0.4
+  # Fleisch & Fisch
+  BEEF: 0.5
+  PORKCHOP: 0.5
+  CHICKEN: 0.4
+  MUTTON: 0.4
+  RABBIT: 0.4
+  COOKED_BEEF: 0.8
+  COOKED_PORKCHOP: 0.8
+  COOKED_CHICKEN: 0.7
+  COOKED_MUTTON: 0.7
+  COD: 0.5
+  SALMON: 0.7
+  # Mob-Drops
+  BONE: 0.3
+  STRING: 0.3
+  GUNPOWDER: 0.8
+  SPIDER_EYE: 0.4
+  ROTTEN_FLESH: 0.1
+  LEATHER: 0.5
+  FEATHER: 0.2
+  EGG: 0.2
+  SLIME_BALL: 1
+  ENDER_PEARL: 3
+  BLAZE_ROD: 3

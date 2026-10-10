@@ -1,0 +1,19 @@
+name: SellGUI
+version: '${version}'
+main: de.louis.sell.SellPlugin
+api-version: '26.2'
+softdepend: [Vault]
+description: /sell oeffnet eine GUI zum Verkaufen von Items
+author: Louis
+commands:
+  sell:
+    description: Items verkaufen
+    usage: /<command> [all|reload]
+    permission: sell.use
+permissions:
+  sell.use:
+    description: /sell benutzen
+    default: true
+  sell.admin:
+    description: Preise neu laden
+    default: op
